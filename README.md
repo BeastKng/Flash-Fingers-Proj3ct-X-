@@ -10,7 +10,7 @@ Project title: [Flash Fingers]
 
 Project page: https://github.com/BeastKng/Flash-Fingers-Proj3ct-X-
 
-Instructions for use (allowable actions): WIll be updated during the course of the project.
+Instructions for use (allowable actions): WIll be updated during the course of the project, but  these including downloading files that one needs to play the game and them being in the same folder alonside the game itself. 
 
 Tools used: [List and describe any .NET libraries or external tools that you imported for use in your project]
 
@@ -18,5 +18,5 @@ Concepts used: [List ALL aspects of the CSc 102 curriculum that your project use
 
 Assumptions: [State ANY assumptions about how you expect the system will be used or run]
 
-Limitations: [State ANY limitations concerning what your program cannot do, though those functions may be implied by the nature of the project]
+Limitations: These will be updated during the course of the program.
 
