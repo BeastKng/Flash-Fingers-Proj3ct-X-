@@ -2,7 +2,7 @@
 Game Development
 Group name: [Project X]
 
-Group members: Zimvo Z Mazingisa, Monde Quluba, Nyiko A Ngobeni
+Group members: Zimvo Z Mazingisa, Monde Quluba, Nyiko A Ngobeni, Angelo Goliath
 
 Group mentor: Zelalem Shibeshi
 
