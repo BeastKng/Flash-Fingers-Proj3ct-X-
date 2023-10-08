@@ -1,0 +1,10 @@
+The world's first computer programmer was Ada Lovelace, who wrote the first algorithm designed to be processed by a machine in the 19th century.
+The first electronic general-purpose computer was the ENIAC (Electronic Numerical Integrator and Computer), completed in 1945.
+The QWERTY keyboard layout, still in use today, was designed to prevent typewriters from jamming by placing frequently used keys apart.
+The concept of computer "viruses" was coined by Frederick Cohen in 1983 to describe self-replicating programs.
+The "Ctrl+Alt+Delete" key combination was designed by IBM engineer David Bradley to reboot the original IBM PC.
+The first graphical web browser was called "Mosaic," developed in 1993.
+The term "bug" in computing dates back to 1947 when a moth was found inside the Harvard Mark II computer, causing a malfunction.
+Alan Turing is often regarded as the father of modern computer science and played a key role in breaking the Enigma code during World War II.
+Moore's Law, proposed by Gordon Moore in 1965, states that the number of transistors on a microchip would double approximately every two years.
+The first video game, "Tennis for Two," was created by physicist William Higinbotham in 1958 and was played on an oscilloscope.
