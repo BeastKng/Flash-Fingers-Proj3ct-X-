@@ -12,11 +12,11 @@ Project page: https://github.com/BeastKng/Flash-Fingers-Proj3ct-X-
 
 Instructions for use (allowable actions): WIll be updated during the course of the project, but  these including downloading files that one needs to play the game and them being in the same folder alonside the game itself. 
 
-Tools used: [List and describe any .NET libraries or external tools that you imported for use in your project]
+Tools used: [android studio, visual studio code, notepad ++, google chrome, youtube]
 
-Concepts used: [List ALL aspects of the CSc 102 curriculum that your project uses. So if your program uses Lists, Files, Recursion, Dictionaries, Custom classes, etc.; document them here and provide directions as to where those concepts are used in the code base. Please use the standard topics list on the Think Sharply with C# web page for the list of anticipated topics/concepts]
+Concepts used: [Lists, Files, Recursion, Dictionaries, Custom classes, Object-Oriented PROGRAMMING, loops, bufferReaders, input and outputs.]
 
-Assumptions: [State ANY assumptions about how you expect the system will be used or run]
+Assumptions: [The system will display a line that the user is supposed to type out and their winning depends on the time they take and the mistakes they make.]
 
-Limitations: These will be updated during the course of the program.
+Limitations: Computing power neecded by android studio made it a hassle to work efficiently on android studio, time management as other courses demand their own respective time. Getting to know how to efficiently use aandroid studio in such a limited amount of time.
 
