@@ -1,3 +1,4 @@
+import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.time.Duration;
@@ -59,9 +60,9 @@ public class GameLogic_Multiple {
         for (int i = 0; i < min_length1; i++) {
             if (output.charAt(i) != User_1.charAt(i)) {
                 mistakes1++;
-                mistakes1 += Math.abs(len_output - len_user1);
+                //mistakes1 += Math.abs(len_output - len_user1);
             }
-        }
+        } mistakes1 += Math.abs(len_output - len_user1);
     
         
         return mistakes1;  // Return the  mistakes for players 
@@ -119,53 +120,73 @@ public class GameLogic_Multiple {
             file = new FileReader("agatha_complete.txt");
         } else {
             System.out.println("Bad input given");
+            System.out.println("You have chosen Muiltiple-player mode. Which field would you like to choose (Anime, Computer, Random):  ");
+            field = in.nextLine();
             return; // Exit the method on bad input.
         }
 
         String output = file.randomSen();
-        System.out.println(output);
-        System.out.println("\nIt's your turn player 1: ");
-        LocalTime p1Start = LocalTime.now();
-        String User_1 = User_input();
-        LocalTime p1End = LocalTime.now();
 
-        Duration player1 = Duration.between(p1Start, p1End);
-        long player1Time = player1.get(ChronoUnit.SECONDS);
+        int totalMistakesPlayer1 = 0;
+        int totalMistakesPlayer2 = 0;
+        long totalTimePlayer1 = 0;
+        long totalTimePlayer2 = 0;
 
-        System.out.println("\nIt's your turn player 2: ");
-        LocalTime p2Start = LocalTime.now();
-        String User_2 = User_input();
-        LocalTime p2End = LocalTime.now();
+        for (int round = 0; round < 3; round++) {
+            output = file.randomSen();
+            System.out.println(output);
+            System.out.println("\nRound " + (round + 1) + ":");
+            
+            System.out.println("\nIt's your turn player 1: ");
+            LocalTime p1Start = LocalTime.now();
+            String User_1 = User_input();
+            LocalTime p1End = LocalTime.now();
+            Duration player1 = Duration.between(p1Start, p1End);
+            long player1Time = player1.get(ChronoUnit.SECONDS);
 
-        Duration player2 = Duration.between(p2Start, p2End);
-        long player2Time = player2.get(ChronoUnit.SECONDS);
+            System.out.println("\nIt's your turn player 2: ");
+            LocalTime p2Start = LocalTime.now();
+            String User_2 = User_input();
+            LocalTime p2End = LocalTime.now();
+            Duration player2 = Duration.between(p2Start, p2End);
+            long player2Time = player2.get(ChronoUnit.SECONDS);
 
-        System.out.print("\nPlayer 1 Results: ");
-        int p1 = Checker1(output, User_1);
-        System.out.println(p1 + " mistake" + "(s)" + "\nPlayer 1 duration: " + player1Time + " seconds");
+            int p1 = Checker1(output, User_1);
+            int p2 = Checker2(output, User_2);
 
-        System.out.print("\nPlayer 2 Results: ");
-        int p2 = Checker2(output, User_2);
-        System.out.println(p2 + " mistake" + "(s)" + "\nPlayer 2 duration: " + player2Time + " seconds");
+            System.out.print("\nPlayer 1 Results (Round " + (round + 1) + "): ");
+            System.out.println(p1 + " mistake" + "(s)" + "\nPlayer 1 duration: " + player1Time + " seconds");
 
-        if(p1 == p2){
-            if(player1Time < player2Time){
-                System.out.println("\nPlayer 1 Wins!!!!!! ");
-            }else if(player1Time > player2Time){
-                System.out.println("\nPlayer 2 Wins!!!!!! ");
-            }else if(player1Time == player2Time){
-                System.out.println("\nIt's a Tie !!!!!!");
-                
+            System.out.print("\nPlayer 2 Results (Round " + (round + 1) + "): ");
+            System.out.println(p2 + " mistake" + "(s)" + "\nPlayer 2 duration: " + player2Time + " seconds");
+
+            totalMistakesPlayer1 += p1;
+            totalMistakesPlayer2 += p2;
+            totalTimePlayer1 += player1Time;
+            totalTimePlayer2 += player2Time;
+        }
+
+        System.out.println("\nOverall Results:");
+        System.out.println("Total Mistakes for Player 1: " + totalMistakesPlayer1 + " mistakes");
+        System.out.println("Total Time for Player 1: " + totalTimePlayer1 + " seconds");
+        System.out.println("Total Mistakes for Player 2: " + totalMistakesPlayer2 + " mistakes");
+        System.out.println("Total Time for Player 2: " + totalTimePlayer2 + " seconds");
+
+        if (totalMistakesPlayer1 == totalMistakesPlayer2) {
+            if (totalTimePlayer1 < totalTimePlayer2) {
+                System.out.println("\nPlayer 1 Wins Overall!!!!!!");
+            } else if (totalTimePlayer1 > totalTimePlayer2) {
+                System.out.println("\nPlayer 2 Wins Overall!!!!!!");
+            } else {
+                System.out.println("\nIt's a Tie Overall!!!!!!");
             }
-        }else{
-            if (p1 < p2) {
-                System.out.println("\nPlayer 1 Wins!!!!!!");
-            }else if (p1 > p2) {
-                System.out.println("\nPlayer 2 Wins!!!!!!!!!");
+        } else {
+            if (totalMistakesPlayer1 < totalMistakesPlayer2) {
+                System.out.println("\nPlayer 1 Wins Overall!!!!!!");
+            } else {
+                System.out.println("\nPlayer 2 Wins Overall!!!!!!");
             }
         }
-         
-       
     }
 
     /*public static void main(String[] args) {

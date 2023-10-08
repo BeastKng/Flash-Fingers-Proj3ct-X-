@@ -91,12 +91,13 @@ public class GameLogic_Drive {
         GameLogic_Multiple game = new GameLogic_Multiple();
         game.MultiPlayer();
     
-    }public static void main(String[]args){
+    }
+    public static void main(String[]args){
 
         
 
         while (true) {
-            System.out.println("Press (1) for single player /\\ Press (2) for Multple player");
+            System.out.println("Press (1) for single player /\\Press (2) for Multple player");
             Scanner in = new Scanner(System.in);        
             String cmd = in.nextLine();
             if (cmd.equalsIgnoreCase("1")){
